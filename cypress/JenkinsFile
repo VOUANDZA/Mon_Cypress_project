@@ -16,7 +16,7 @@ stage('Run cypress tests'){
     steps{
         //sh './batchs/e2etests.sh'
         //sh './batchs/e2etests.sh'
-        sh 'cypress/batchs/e2etests.sh'
+        sh 'cypress/batchs/e2etest.sh'
     }
 }
 
