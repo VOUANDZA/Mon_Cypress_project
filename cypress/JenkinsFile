@@ -22,7 +22,7 @@ stage('Run cypress'){
     }
 post{
     always{
-        junit 'results/*xml'
+        junit 'results/*.xml'
     }
 }
 
