@@ -9,7 +9,7 @@ pipeline{
     stages{
 stage('intall dependencies'){
     steps{
-      sh 'CYPRESS_INSTALL_BINARY=0 npm install'
+        sh 'npm install'
     }
 }
 stage('Run cypress'){
