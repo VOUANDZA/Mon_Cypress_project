@@ -1,0 +1,23 @@
+pipeline{
+    agent{
+       docker{
+        image 'cypress/browsers:node-24.11.1-chrome-142.0.7444.162-1-ff-145.0-edge-142.0.3595.65-1'
+       }
+    }
+    stages{
+stage('intall dependencies'){
+    steps{
+        sh 'npm install'
+    }
+}
+stage('Run cypress tests'){
+    steps{
+        //sh './batchs/e2etests.sh'
+        //sh './batchs/e2etests.sh'
+        sh 'cypress/batchs/e2etests.sh'
+    }
+}
+
+    }
+    
+}
