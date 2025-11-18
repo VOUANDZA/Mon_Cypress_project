@@ -19,12 +19,14 @@ stage('Run cypress'){
         sh 'npx cypress run'
     }
 }
-    }
-post{
-    always{
+stage(' Generer un rapport'){
+    steps{
         junit 'results/*.xml'
     }
 }
+
+
+    }
 
 
    
